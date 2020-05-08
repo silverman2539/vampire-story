@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<title>Vampires!</title>
+        <link rel="shortcut icon" href="blood.ico">
+		<style>
+			body
+			{
+				background-color: gray;
+				color: silver;
+				border-color: silver;
+				border-style: solid;
+				font-size: 50;
+				text-align: center;
+				padding: 25;
+			}
+			img
+			{
+				height: 300;
+			}
+			div
+			{
+				background-color: white;
+				border-style: solid;
+				border-color: silver;
+				display: inline-block;
+				padding: 25;
+				font-size: 25;
+				color: gray;
+			}
+			button
+			{
+				font-size: 20;
+				background-color: gainsboro;
+				border-style: solid;
+				border-color: silver;
+				color: gray;
+			}
+			button:hover
+			{
+				opacity: 75%;
+			}
+		</style>
+	</head>
+	
+	<body onkeypress="Space()">
+		<p>Vampires!</p>
+		<p style="font-size:15;">(press any key to continue)</p>
+		<div>
+			<img id="me" src="me.jpg">
+			<img id="scout" src="scout.jpg" style="display:none;">
+			<img id="random1" src="random1.jpg" style="display:none;">
+			<img id="me-kidnapped" src="me.jpg" style="display:none;">
+			<img id="random2" src="random2.jpg" style="display:none;">
+			<p id="text-1">This is me!</p>
+			<p id="text-2" style="display:none;">This is you!</p>
+			<p id="text-3" style="display:none;">This is us!</p>
+			<p id="text-4" style="display:none;">We were happy!</p>
+			<p id="text-5" style="display:none;">But then mean vampires showed up!</p>
+			<p id="text-6" style="display:none;">These are the mean vampires!</p>
+			<p id="text-7" style="display:none;">They kidnapped me!</p>
+			<p id="text-8" style="display:none;">But then you showed up!</p>
+			<p id="text-9" style="display:none;">And you saved me!</p>
+		</div>
+		
+		<script>
+			var vamp = 0;
+			
+			function Space()
+			{
+				vamp = vamp + 1;
+				if (vamp == 1)
+				{
+					document.getElementById("me").style.display = "none";
+					document.getElementById("text-1").style.display = "none";
+					document.getElementById("text-2").style.display = "";
+					document.getElementById("scout").style.display = "";
+				}
+				if (vamp == 2)
+				{
+					document.getElementById("me").style.display = "";
+					document.getElementById("text-2").style.display = "none";
+					document.getElementById("text-3").style.display = "";
+				}
+				if (vamp == 3)
+				{
+					document.getElementById("text-3").style.display = "none";
+					document.getElementById("text-4").style.display = "";
+				}
+				if (vamp == 4)
+				{
+					document.getElementById("text-4").style.display = "none";
+					document.getElementById("text-5").style.display = "";
+				}
+				if (vamp == 5)
+				{
+					document.getElementById("text-5").style.display = "none";
+					document.getElementById("text-6").style.display = "";
+					document.getElementById("me").style.display = "none";
+					document.getElementById("scout").style.display = "none";
+					document.getElementById("random1").style.display = "";
+					document.getElementById("random2").style.display = "";
+				}
+				if (vamp == 6)
+				{
+					document.getElementById("text-6").style.display = "none";
+					document.getElementById("text-7").style.display = "";
+					document.getElementById("me-kidnapped").style.display = "";
+				}
+				if (vamp == 7)
+				{
+					document.getElementById("text-7").style.display = "none";
+					document.getElementById("text-8").style.display = "";
+					document.getElementById("scout").style.display = "";
+				}
+				if (vamp == 8)
+				{
+					document.getElementById("text-8").style.display = "none";
+					document.getElementById("text-9").style.display = "";
+					document.getElementById("me-kidnapped").style.display = "none";
+					document.getElementById("random1").style.display = "none";
+					document.getElementById("random2").style.display = "none";
+					document.getElementById("me").style.display = "";
+				}
+			}
+		</script>
+	</body>
+</html>
